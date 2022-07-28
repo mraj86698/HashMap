@@ -10,6 +10,8 @@ public class HashTableMain {
 	         System.out.println("   1. Insert a Key Value )");
 	         System.out.println("   2. Display Hash Table");
 	         System.out.println("   3. Delete Key Value");
+	         System.out.println("	4. Search the Key Value");
+
 
 
 	         System.out.print("Enter your Option:  ");
@@ -29,6 +31,12 @@ public class HashTableMain {
 	            key =Utility.inputString();
 	            table.remove(key);
 	            break;
+	         case 4:
+	        	 System.out.print("\n Enter the  Key : ");
+	            key = Utility.inputString();
+	            System.out.println("   Value is " + table.get(key));
+	            break;
+
 
 	         default:
 	            System.out.println("   Illegal command.");

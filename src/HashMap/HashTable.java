@@ -166,6 +166,28 @@ public class HashTable {
 	         prev.next = curr.next;
 	         count--;
 	      }
+
+
+	   }
+	   /**
+	    * Retrieve the value associated with the Unique key in the table,
+	    * If not, the value null will be returned.
+	    * @param key The key whose associated value we want to find
+	    * @return  value, or null
+	    */
+	   public String get(String key) {
+
+	      int bucket = hash(key);
+
+	      Node list = table[bucket];
+	      while (list != null) {
+
+	         if (list.key.equals(key))
+	            return list.value;
+	         list = list.next;  // Move on to next node in the list.
+	      }
+
+	     return null;
 	   }
 
 
