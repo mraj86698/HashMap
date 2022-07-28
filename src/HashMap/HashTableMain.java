@@ -9,6 +9,7 @@ public class HashTableMain {
 	         System.out.println("\nMenu:");
 	         System.out.println("   1. Insert a Key Value )");
 	         System.out.println("   2. Display Hash Table");
+	         System.out.println("   3. Delete Key Value");
 
 
 	         System.out.print("Enter your Option:  ");
@@ -23,6 +24,11 @@ public class HashTableMain {
 	         case 2:
 		            table.display();
 		            break;
+	         case 3:
+	        	 System.out.print("\n Enter the  Key : ");
+	            key =Utility.inputString();
+	            table.remove(key);
+	            break;
 
 	         default:
 	            System.out.println("   Illegal command.");

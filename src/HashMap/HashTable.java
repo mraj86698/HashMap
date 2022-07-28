@@ -131,8 +131,42 @@ public class HashTable {
 	         }
 	         System.out.println();
 	      }
-	   } // end dump()
+	   }
 
+	   /**
+	    * Remove the key and its value from the table
+	    */
+	   public void remove(String key) {
+
+	      int bucket = hash(key);
+
+	      if (table[bucket] == null) {
+
+	         return;
+	      }
+
+	      if (table[bucket].key.equals(key)) {
+	         table[bucket] = table[bucket].next;
+	         count--;
+	         return;
+	      }
+
+	      //	To remove a node from the middle of the list or at the end.
+	      //	Use a pointer to traverse the list,  a node that contains the specified key, and remove it.
+
+	      Node prev = table[bucket];
+	      Node curr = prev.next;
+	      while (curr != null && ! curr.key.equals(key)) {
+	         curr = curr.next;
+	         prev = curr;
+	      }
+
+
+	      if (curr != null) {
+	         prev.next = curr.next;
+	         count--;
+	      }
+	   }
 
 
 }
