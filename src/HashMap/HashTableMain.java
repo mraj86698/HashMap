@@ -7,7 +7,8 @@ public class HashTableMain {
 	      String key,value;
 	      while (true) {
 	         System.out.println("\nMenu:");
-	         System.out.println("   1. Insert)");
+	         System.out.println("   1. Insert a Key Value )");
+	         System.out.println("   2. Display Hash Table");
 
 
 	         System.out.print("Enter your Option:  ");
@@ -19,6 +20,9 @@ public class HashTableMain {
 	            value = Utility.inputString();
 	            table.put(key,value);
 	            break;
+	         case 2:
+		            table.display();
+		            break;
 
 	         default:
 	            System.out.println("   Illegal command.");

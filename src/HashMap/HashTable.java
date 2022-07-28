@@ -117,6 +117,22 @@ public class HashTable {
 	      table = newtable;  // Replace the table with the new table.
 	   } // end resize()
 
+	   /**
+	    * This lists is the (key,value) pairs in each location of the table.
+	    */
+	   void display() {
+	      System.out.println();
+	      for (int i = 0; i < table.length; i++) {
+	         System.out.print(i + ":");
+	         Node list = table[i];
+	         while (list != null) {
+	            System.out.print("  (" + list.key + "," + list.value + ")");
+	            list = list.next;
+	         }
+	         System.out.println();
+	      }
+	   } // end dump()
+
 
 
 }
