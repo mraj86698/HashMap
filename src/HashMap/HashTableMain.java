@@ -7,12 +7,17 @@ public class HashTableMain {
 	      while (true) {
 
 	         System.out.println("1. WordCounter");
+	         System.out.println("2. Find Frequency Of Word in Para");
 	        System.out.print("Enter your Option:  ");
 	         switch ( Utility.inputInteger()) {
 
 	         case 1:
-	        	 String s = "To be or not to be";
-	        	 hash.wordCount(s);
+	        	 //String s = "To be or not to be";
+	        	 hash.wordCount();
+	        	 break;
+	         case 2:
+	        	 //String str = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+	        	 hash.findFrequency();
 	        	 break;
 	         default:
 	            System.out.println("   Illegal command.");
