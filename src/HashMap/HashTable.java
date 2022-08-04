@@ -73,4 +73,26 @@ public class HashTable {
 
 	}
 
+	public void removeAvoidable(String str, String word) {
+		/**
+		 * Str is an an input
+		 * Word to be removed from above string
+		 * Splitting the string and storing the array.
+		 * Iterating the string using for each loop
+		 * Printing the original String & modified string
+		 */
+		 String arr[] = str.split(" ");
+	        String str2 = "";
+
+	        //
+	        for (String words : arr) {
+	        	if (!words.equals(word)) {
+	 	                str2 += words + " ";
+	            }
+	        }
+	        System.out.println("\nOrginal string : " +str);
+	        System.out.println("\nModified string : " +str2);
+
+	}
+
 }
